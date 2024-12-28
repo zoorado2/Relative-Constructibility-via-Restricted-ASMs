@@ -136,6 +136,40 @@
       \field{title}{A structural approach to operational semantics}
       \field{year}{1981}
     \endentry
+    \entry{meyer}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7833218c9c8ce508ce4d4482308c9da5}{%
+           family={Meyer},
+           familyi={M\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3c70dd2576510d68ed30f8fd537b53bd}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Prentice},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7833218c9c8ce508ce4d4482308c9da5}{%
+           family={Meyer},
+           familyi={M\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{68dcfaddbf9c28eccd8438706c8f7c4b}
+      \strng{fullhash}{68dcfaddbf9c28eccd8438706c8f7c4b}
+      \strng{fullhashraw}{68dcfaddbf9c28eccd8438706c8f7c4b}
+      \strng{bibnamehash}{68dcfaddbf9c28eccd8438706c8f7c4b}
+      \strng{authorbibnamehash}{68dcfaddbf9c28eccd8438706c8f7c4b}
+      \strng{authornamehash}{68dcfaddbf9c28eccd8438706c8f7c4b}
+      \strng{authorfullhash}{68dcfaddbf9c28eccd8438706c8f7c4b}
+      \strng{authorfullhashraw}{68dcfaddbf9c28eccd8438706c8f7c4b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Introduction to the Theory of Programming Languages, Prentice-Hall, Inc, Englewood Cliffs, NJ}
+      \field{title}{Axiomatic semantics}
+      \field{year}{1990}
+    \endentry
     \entry{gurevich}{article}{}{}
       \name{author}{1}{}{%
         {{hash=d36b6995ab536537094bfe3e5596722b}{%
