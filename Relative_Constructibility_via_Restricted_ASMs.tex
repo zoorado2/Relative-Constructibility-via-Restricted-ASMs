@@ -122,7 +122,7 @@ So, what exactly is a program? To a software engineer, it might be a compilable 
 \end{itemize} 
 Following the line of thinking inspired by our two examples, it seems convenient --- even natural --- to define a program as any object admitted by a fixed model of computation. 
 
-Models of computation studied by computer scientists and mathematicians are aplenty. They include common programming languages, along with the semantics (see e.g.\cite{scott} and \cite{plotkin}) --- in various paradigms --- associated with each language. They also include stalwarts from almost a century ago, three of which are
+Models of computation studied by computer scientists and mathematicians are aplenty. They include common programming languages, along with the semantics (see e.g.\cite{scott} and \cite{meyer}) --- in various paradigms --- associated with each language. They also include stalwarts from almost a century ago, three of which are
 \begin{enumerate}[leftmargin=40pt, label=(CT\arabic*)]
     \item\label{ct1} G\"{o}del's operation schema,
     \item Church's $\lambda$-calculus, and of course
@@ -144,7 +144,7 @@ In any case, the models of set computation introduced hitherto rely very much on
 \end{quote}
 This kind of arguments often lead to unintuitive definitions insofar as computation is concerned, sometimes to the extent of an apology being issued (e.g. \cite{sackserec}). Indeed, modern intuition of computation has evolved to become rather high-level, and the models which motivated the Church-Turing thesis have been relegated to play the roles of convenient mathematical foundations, instead of anything resembling practical mental models of computation.
 
-Perhaps the most celebrated attempt at amalgamating and formalising useful mental models of computations and algorithms, comes in the form of a series of papers (starting with \cite{gurevich}) by Gurevich on abstract state machines. That abstract state machines have been adapted for use in fields ranging from software development to systems engineering is testament to the intuitiveness of their design. Having said that, how well these machines are equipped to handle the intuition of computations on arbitrary sets is yet to be vigorously tested.
+Perhaps the most celebrated attempt at amalgamating and formalising useful mental models of computations and algorithms, comes in the form of a series of papers (starting with \cite{gurevich}) by Gurevich on abstract state machines. Abstract state machines far more closely resemble ``high-level'' meta-theoretic representations of Plotkin-style semantics (found e.g. in \cite{plotkin}), than they do anything among \ref{ct1} to \ref{ct3}. That these machines have been adapted for use in fields ranging from software development to systems engineering is testament to the intuitiveness of their design. Having said that, how well they are equipped to handle the intuition of computations on infinite sets is yet to be vigorously tested, for literature in this respect is scarce.
 
 \subsection{Generalising Computability}\label{subsec22}
 
@@ -198,7 +198,7 @@ Our modifications result in a new type of machine (abbreviated to RASMP) that po
 
 \section{Restricting Abstract State Machines}\label{sect2}
 
-In this section, we progressively chip away at the very useful, but very inclusive, definition of a sequential abstract state machine to arrive at various notions of generalised (relative) computability.
+In this section, we progressively chip away at the very useful, but very inclusive, definition of a sequential abstract state machine, to arrive at a more restrictive machine model which also better captures our intuition of generalised computation. 
 
 \subsection{Abstract State Machines}
 
@@ -1118,6 +1118,8 @@ For a limit ordinal $\kappa$ and two sets of ordinals $A$ and $B$, that $\mathrm
 
 \section{Computability and Comparisons}
 
+In this section, we derive from our restricted abstract state machines, various notions of generalised (relative) computability. We then compare these notions with existing ones.
+
 \subsection{Relative Computability}
 
 As prefaced in the previous subsection, we aim to use our definition of terminating runs to capture the notion of relative computability right off the bat.
@@ -1588,7 +1590,7 @@ Let $A$ and $B$ be two sets of ordinals. Then $B \leq^P A$ iff $B \preceq_A A$.
 Immediate by Remark \ref{rem336}.
 \end{proof}
 
-\subsection{Discussion and Questions}
+\section{Discussion and Questions}
 
 The following are two basic facts about relative constructibility.
 
@@ -1634,11 +1636,11 @@ It is consistent that $(\mathcal{D}_P, \leq_{\mathcal{D}_P})$ is highly non-triv
         \mathsf{ZFC} + \text{``} \exists \text{ a transitive model of } \mathsf{ZFC} \text{''} \vdash \text{``} & \exists \text{ a transitive model of } \mathsf{ZFC} \ + \\
         & \text{`} V \neq L[A] \text{ for all } A \in V \text{'''.}
     \end{aligned}$
-    \item $\mathsf{ZFC} + \text{``} \exists \text{ a strongly compact cardinal''} \vdash \text{``} V \neq L[A] \text{ for all } A \in V \text{''}$.
+    \item\label{432} $\mathsf{ZFC} + \text{``} \exists \text{ a strongly compact cardinal''} \vdash \text{``} V \neq L[A] \text{ for all } A \in V \text{''}$.
 \end{enumerate}
 \end{fact}
 
-Note that $V \neq L[A]$ for all $A \in V$ is equivalent to $(\mathcal{D}_P, \leq_{\mathcal{D}_P})$ having no maximal element, so Fact \ref{fact284} actually gives us
+In particular, \ref{432} of Fact \ref{fact284} is implied by Exercise 20.2 of \cite{jech}. Note that $V \neq L[A]$ for all $A \in V$ is equivalent to $(\mathcal{D}_P, \leq_{\mathcal{D}_P})$ having no maximal element, so Fact \ref{fact284} actually gives us
 
 \begin{enumerate}[label=(E\arabic*)]
     \item\label{e1}
