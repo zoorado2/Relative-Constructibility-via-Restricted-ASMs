@@ -1,0 +1,454 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{takeuti}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9a6f44fd63be15b0b390d3447a3f47e7}{%
+           family={Takeuti},
+           familyi={T\bibinitperiod},
+           given={Gaisi},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Mathematical Society of Japan}%
+      }
+      \strng{namehash}{9a6f44fd63be15b0b390d3447a3f47e7}
+      \strng{fullhash}{9a6f44fd63be15b0b390d3447a3f47e7}
+      \strng{fullhashraw}{9a6f44fd63be15b0b390d3447a3f47e7}
+      \strng{bibnamehash}{9a6f44fd63be15b0b390d3447a3f47e7}
+      \strng{authorbibnamehash}{9a6f44fd63be15b0b390d3447a3f47e7}
+      \strng{authornamehash}{9a6f44fd63be15b0b390d3447a3f47e7}
+      \strng{authorfullhash}{9a6f44fd63be15b0b390d3447a3f47e7}
+      \strng{authorfullhashraw}{9a6f44fd63be15b0b390d3447a3f47e7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Mathematical Society of Japan}
+      \field{number}{2}
+      \field{title}{On the recursive functions of ordinal numbers}
+      \field{volume}{12}
+      \field{year}{1960}
+      \field{pages}{119\bibrangedash 128}
+      \range{pages}{10}
+    \endentry
+    \entry{scott}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=cf3b63c577143e7ddf272693c8301798}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Dana\bibnamedelima S},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=cbbad7395e46410132fa077aee3efcd6}{%
+           family={Strachey},
+           familyi={S\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Computing Laboratory, Programming Research Group Oxford}%
+      }
+      \strng{namehash}{0334977b4075d77a35660f624e3f02f6}
+      \strng{fullhash}{0334977b4075d77a35660f624e3f02f6}
+      \strng{fullhashraw}{0334977b4075d77a35660f624e3f02f6}
+      \strng{bibnamehash}{0334977b4075d77a35660f624e3f02f6}
+      \strng{authorbibnamehash}{0334977b4075d77a35660f624e3f02f6}
+      \strng{authornamehash}{0334977b4075d77a35660f624e3f02f6}
+      \strng{authorfullhash}{0334977b4075d77a35660f624e3f02f6}
+      \strng{authorfullhashraw}{0334977b4075d77a35660f624e3f02f6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Toward a mathematical semantics for computer languages}
+      \field{volume}{1}
+      \field{year}{1971}
+    \endentry
+    \entry{normann}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=b0dd7c3e287c74b1f8469d12700d705b}{%
+           family={Normann},
+           familyi={N\bibinitperiod},
+           given={Dag},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b0dd7c3e287c74b1f8469d12700d705b}
+      \strng{fullhash}{b0dd7c3e287c74b1f8469d12700d705b}
+      \strng{fullhashraw}{b0dd7c3e287c74b1f8469d12700d705b}
+      \strng{bibnamehash}{b0dd7c3e287c74b1f8469d12700d705b}
+      \strng{authorbibnamehash}{b0dd7c3e287c74b1f8469d12700d705b}
+      \strng{authornamehash}{b0dd7c3e287c74b1f8469d12700d705b}
+      \strng{authorfullhash}{b0dd7c3e287c74b1f8469d12700d705b}
+      \strng{authorfullhashraw}{b0dd7c3e287c74b1f8469d12700d705b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Studies in Logic and the Foundations of Mathematics}
+      \field{title}{Set recursion}
+      \field{volume}{94}
+      \field{year}{1978}
+      \field{pages}{303\bibrangedash 320}
+      \range{pages}{18}
+    \endentry
+    \entry{plotkin}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=89f698d393d48350aa3ea0e444adcfdd}{%
+           family={Plotkin},
+           familyi={P\bibinitperiod},
+           given={Gordon\bibnamedelima D},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{89f698d393d48350aa3ea0e444adcfdd}
+      \strng{fullhash}{89f698d393d48350aa3ea0e444adcfdd}
+      \strng{fullhashraw}{89f698d393d48350aa3ea0e444adcfdd}
+      \strng{bibnamehash}{89f698d393d48350aa3ea0e444adcfdd}
+      \strng{authorbibnamehash}{89f698d393d48350aa3ea0e444adcfdd}
+      \strng{authornamehash}{89f698d393d48350aa3ea0e444adcfdd}
+      \strng{authorfullhash}{89f698d393d48350aa3ea0e444adcfdd}
+      \strng{authorfullhashraw}{89f698d393d48350aa3ea0e444adcfdd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Tech. Rep. DAIMI FN-19, Computer Science Department, Aarhus University}
+      \field{title}{A structural approach to operational semantics}
+      \field{year}{1981}
+    \endentry
+    \entry{gurevich}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d36b6995ab536537094bfe3e5596722b}{%
+           family={Gurevich},
+           familyi={G\bibinitperiod},
+           given={Yuri},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{d36b6995ab536537094bfe3e5596722b}
+      \strng{fullhash}{d36b6995ab536537094bfe3e5596722b}
+      \strng{fullhashraw}{d36b6995ab536537094bfe3e5596722b}
+      \strng{bibnamehash}{d36b6995ab536537094bfe3e5596722b}
+      \strng{authorbibnamehash}{d36b6995ab536537094bfe3e5596722b}
+      \strng{authornamehash}{d36b6995ab536537094bfe3e5596722b}
+      \strng{authorfullhash}{d36b6995ab536537094bfe3e5596722b}
+      \strng{authorfullhashraw}{d36b6995ab536537094bfe3e5596722b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Computational Logic (TOCL)}
+      \field{number}{1}
+      \field{title}{Sequential abstract-state machines capture sequential algorithms}
+      \field{volume}{1}
+      \field{year}{2000}
+      \field{pages}{77\bibrangedash 111}
+      \range{pages}{35}
+    \endentry
+    \entry{ittm}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d6e139e04e1ed1547b7e0315915d6822}{%
+           family={Hamkins},
+           familyi={H\bibinitperiod},
+           given={Joel\bibnamedelima David},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=2875d0e369b7ed8f7bdf510607c24e15}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{15ffa76e8367944f9ee855862aca7617}
+      \strng{fullhash}{15ffa76e8367944f9ee855862aca7617}
+      \strng{fullhashraw}{15ffa76e8367944f9ee855862aca7617}
+      \strng{bibnamehash}{15ffa76e8367944f9ee855862aca7617}
+      \strng{authorbibnamehash}{15ffa76e8367944f9ee855862aca7617}
+      \strng{authornamehash}{15ffa76e8367944f9ee855862aca7617}
+      \strng{authorfullhash}{15ffa76e8367944f9ee855862aca7617}
+      \strng{authorfullhashraw}{15ffa76e8367944f9ee855862aca7617}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Symbolic Logic}
+      \field{number}{2}
+      \field{title}{Infinite time Turing machines}
+      \field{volume}{65}
+      \field{year}{2000}
+      \field{pages}{567\bibrangedash 604}
+      \range{pages}{38}
+    \endentry
+    \entry{gurevichblass}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=e4be97472702d5f94b6d5fd932ccedd9}{%
+           family={Blass},
+           familyi={B\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d36b6995ab536537094bfe3e5596722b}{%
+           family={Gurevich},
+           familyi={G\bibinitperiod},
+           given={Yuri},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{3e27bc1bd6e7ca1f0db409642615d708}
+      \strng{fullhash}{3e27bc1bd6e7ca1f0db409642615d708}
+      \strng{fullhashraw}{3e27bc1bd6e7ca1f0db409642615d708}
+      \strng{bibnamehash}{3e27bc1bd6e7ca1f0db409642615d708}
+      \strng{authorbibnamehash}{3e27bc1bd6e7ca1f0db409642615d708}
+      \strng{authornamehash}{3e27bc1bd6e7ca1f0db409642615d708}
+      \strng{authorfullhash}{3e27bc1bd6e7ca1f0db409642615d708}
+      \strng{authorfullhashraw}{3e27bc1bd6e7ca1f0db409642615d708}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Computational Logic (TOCL)}
+      \field{number}{4}
+      \field{title}{Abstract state machines capture parallel algorithms}
+      \field{volume}{4}
+      \field{year}{2003}
+      \field{pages}{578\bibrangedash 651}
+      \range{pages}{74}
+    \endentry
+    \entry{jech}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b8ddd852d7bc9bcd5d92f6c9c3251005}{%
+           family={Jech},
+           familyi={J\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b8ddd852d7bc9bcd5d92f6c9c3251005}
+      \strng{fullhash}{b8ddd852d7bc9bcd5d92f6c9c3251005}
+      \strng{fullhashraw}{b8ddd852d7bc9bcd5d92f6c9c3251005}
+      \strng{bibnamehash}{b8ddd852d7bc9bcd5d92f6c9c3251005}
+      \strng{authorbibnamehash}{b8ddd852d7bc9bcd5d92f6c9c3251005}
+      \strng{authornamehash}{b8ddd852d7bc9bcd5d92f6c9c3251005}
+      \strng{authorfullhash}{b8ddd852d7bc9bcd5d92f6c9c3251005}
+      \strng{authorfullhashraw}{b8ddd852d7bc9bcd5d92f6c9c3251005}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Set theory: The third millennium edition, revised and expanded}
+      \field{year}{2003}
+    \endentry
+    \entry{koepke1}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ec170b6fb91a830ea29c2dce7d13f9a9}{%
+           family={Koepke},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{ec170b6fb91a830ea29c2dce7d13f9a9}
+      \strng{fullhash}{ec170b6fb91a830ea29c2dce7d13f9a9}
+      \strng{fullhashraw}{ec170b6fb91a830ea29c2dce7d13f9a9}
+      \strng{bibnamehash}{ec170b6fb91a830ea29c2dce7d13f9a9}
+      \strng{authorbibnamehash}{ec170b6fb91a830ea29c2dce7d13f9a9}
+      \strng{authornamehash}{ec170b6fb91a830ea29c2dce7d13f9a9}
+      \strng{authorfullhash}{ec170b6fb91a830ea29c2dce7d13f9a9}
+      \strng{authorfullhashraw}{ec170b6fb91a830ea29c2dce7d13f9a9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of Symbolic Logic}
+      \field{number}{3}
+      \field{title}{Turing computations on ordinals}
+      \field{volume}{11}
+      \field{year}{2005}
+      \field{pages}{377\bibrangedash 397}
+      \range{pages}{21}
+    \endentry
+    \entry{koepke2}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ec170b6fb91a830ea29c2dce7d13f9a9}{%
+           family={Koepke},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ed5dca6d189d9b01a8cc928c597bb87c}{%
+           family={Koerwien},
+           familyi={K\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{e482e32fc43d33175a061eb5463f5ea5}
+      \strng{fullhash}{e482e32fc43d33175a061eb5463f5ea5}
+      \strng{fullhashraw}{e482e32fc43d33175a061eb5463f5ea5}
+      \strng{bibnamehash}{e482e32fc43d33175a061eb5463f5ea5}
+      \strng{authorbibnamehash}{e482e32fc43d33175a061eb5463f5ea5}
+      \strng{authornamehash}{e482e32fc43d33175a061eb5463f5ea5}
+      \strng{authorfullhash}{e482e32fc43d33175a061eb5463f5ea5}
+      \strng{authorfullhashraw}{e482e32fc43d33175a061eb5463f5ea5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical Structures in Computer Science}
+      \field{number}{5}
+      \field{title}{Ordinal computations}
+      \field{volume}{16}
+      \field{year}{2006}
+      \field{pages}{867\bibrangedash 884}
+      \range{pages}{18}
+    \endentry
+    \entry{sackserec}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ddbf657eaaac05567ddfbcb38603aac7}{%
+           family={Sacks},
+           familyi={S\bibinitperiod},
+           given={GE},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{ddbf657eaaac05567ddfbcb38603aac7}
+      \strng{fullhash}{ddbf657eaaac05567ddfbcb38603aac7}
+      \strng{fullhashraw}{ddbf657eaaac05567ddfbcb38603aac7}
+      \strng{bibnamehash}{ddbf657eaaac05567ddfbcb38603aac7}
+      \strng{authorbibnamehash}{ddbf657eaaac05567ddfbcb38603aac7}
+      \strng{authornamehash}{ddbf657eaaac05567ddfbcb38603aac7}
+      \strng{authorfullhash}{ddbf657eaaac05567ddfbcb38603aac7}
+      \strng{authorfullhashraw}{ddbf657eaaac05567ddfbcb38603aac7}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Effective Mathematics of the Uncountable}
+      \field{title}{E-recursive intuitions}
+      \field{year}{2013}
+      \field{pages}{135\bibrangedash 149}
+      \range{pages}{15}
+    \endentry
+    \entry{sacks}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=227b74c2ef35ef2de30d1af50e56c315}{%
+           family={Sacks},
+           familyi={S\bibinitperiod},
+           given={Gerald\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{227b74c2ef35ef2de30d1af50e56c315}
+      \strng{fullhash}{227b74c2ef35ef2de30d1af50e56c315}
+      \strng{fullhashraw}{227b74c2ef35ef2de30d1af50e56c315}
+      \strng{bibnamehash}{227b74c2ef35ef2de30d1af50e56c315}
+      \strng{authorbibnamehash}{227b74c2ef35ef2de30d1af50e56c315}
+      \strng{authornamehash}{227b74c2ef35ef2de30d1af50e56c315}
+      \strng{authorfullhash}{227b74c2ef35ef2de30d1af50e56c315}
+      \strng{authorfullhashraw}{227b74c2ef35ef2de30d1af50e56c315}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Higher recursion theory}
+      \field{volume}{2}
+      \field{year}{2017}
+    \endentry
+    \entry{myself}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=c312cbf964a9f81bebf7230c6637a56b}{%
+           family={Lau},
+           familyi={L\bibinitperiod},
+           given={Desmond},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{fullhash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{fullhashraw}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{bibnamehash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{authorbibnamehash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{authornamehash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{authorfullhash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{authorfullhashraw}{c312cbf964a9f81bebf7230c6637a56b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.LO}
+      \field{eprinttype}{arXiv}
+      \field{title}{Forcing with Language Fragments, Extending Namba Forcing, and Models of Theories with Constraints in Interpretation}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2402.01213
+      \endverb
+    \endentry
+    \entry{slaman}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1a00feeb646a4050a84813e081c685a9}{%
+           family={(https://mathoverflow.net/users/29231/zoorado)},
+           familyi={(\bibinitperiod},
+           given={Zoorado},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a00feeb646a4050a84813e081c685a9}
+      \strng{fullhash}{1a00feeb646a4050a84813e081c685a9}
+      \strng{fullhashraw}{1a00feeb646a4050a84813e081c685a9}
+      \strng{bibnamehash}{1a00feeb646a4050a84813e081c685a9}
+      \strng{authorbibnamehash}{1a00feeb646a4050a84813e081c685a9}
+      \strng{authornamehash}{1a00feeb646a4050a84813e081c685a9}
+      \strng{authorfullhash}{1a00feeb646a4050a84813e081c685a9}
+      \strng{authorfullhashraw}{1a00feeb646a4050a84813e081c685a9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{MathOverflow}
+      \field{note}{(version: 2024-02-17)}
+      \field{title}{Does $A \leq_{\alpha} B$ imply $A \leq_{\beta} B$ for admissible ordinals $\alpha$ [and] $\beta$?}
+      \verb{eprint}
+      \verb https://mathoverflow.net/q/464328
+      \endverb
+      \verb{urlraw}
+      \verb https://mathoverflow.net/q/464328
+      \endverb
+      \verb{url}
+      \verb https://mathoverflow.net/q/464328
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
