@@ -63,7 +63,7 @@ linkcolor=blue
 \maketitle
 
 \begin{abstract}
-We restrict the computational power of Gurevich's abstract state machines to obtain two classes of machine models for generalised computation of sets, namely \textit{restricted abstract state machines} (\textit{RASMs}) and \textit{restricted abstract state machines with parameters} (\textit{RASMPs}). We derive from each class, a relative computability relation on sets, which generalises the Turing reducibility relation on reals. it is then proven that the relation computability relation derived from RASMPs is equivalent to relative constructibility.
+We restrict the computational power of Gurevich's abstract state machines to obtain two classes of machine models for generalised computation of sets, namely \textit{restricted abstract state machines} (\textit{RASMs}) and \textit{restricted abstract state machines with parameters} (\textit{RASMPs}). We derive from each class, a relative computability relation on sets, which is analogous to the Turing reducibility relation on reals. We then prove that the relative computability relation derived from RASMPs is equivalent to relative constructibility.
 \end{abstract}
 
 \newtheorem{thm}{Theorem}[section]
@@ -128,9 +128,9 @@ Models of computation studied by computer scientists and mathematicians are aple
     \item Church's $\lambda$-calculus, and of course
     \item\label{ct3} Turing machines.
 \end{enumerate}
-One obvious commonality of said models of computation is, they admit only finitary programs and runs. It follows that these models forbid infinitary computations, which is understandable and justified, considering infinitary computations are intuitively unrealisable in the real world. 
+One obvious commonality of said models of computation is, they admit only finitary programs and runs. It follows that these models forbid \textit{infinitary computations}, which is understandable and justified, considering infinitary computations are intuitively unrealisable in the real world. 
 
-But what if someone takes mathematical and philosophical interest in defining and studying \textit{infinitary computations}, real-world considerations be damned? Is there inherent technical difficulty in doing so? The answer is, ``No, not really,'' as evidenced by a multitude of well-received attempts (as much as a subject this niched can be well-received) at generalising computation to the infinite. Such generalisations are appropriately termed \textit{models of generalised computation}.
+But what if someone takes mathematical and philosophical interest in defining and studying infinitary computations, real-world considerations be damned? Is there inherent technical difficulty in doing so? The answer is, ``No, not really,'' as evidenced by a multitude of well-received attempts (as much as a subject this niched can be well-received) at generalising computation to the infinite. Such generalisations are appropriately termed \textit{models of generalised computation}.
 
 Since many decades ago, mathematical logicians have tried their hand at adapting models among \ref{ct1} to \ref{ct3} to allow computations with, and on, arbitrary sets.
 
@@ -138,19 +138,21 @@ From the perspective of recursion theory, where the structure of Turing degrees 
 
 From the perspective of ``computer as a machine'', we have Koepke's ordinal Turing machines (see \cite{koepke1}). Ordinal Turing machines are a generalisation of \ref{ct3}: they work like standard Turing machines, except their tapes are now $ORD$-length and they can each refer to finitely many ordinals as parameters. 
 
-In any case, the models of set computation introduced hitherto rely very much on the Church-Turing thesis for justification of properness. Such justification usually goes along the lines of,
+In any case, the models of generalised computation introduced hitherto rely very much on the Church-Turing thesis for justification of properness. Such justification usually goes along the lines of,
 \begin{quote}
-    \emph{if $X$ nicely generalises a model among \ref{ct1} to \ref{ct3} and the Church-Turing thesis says that the object of generalisation is a model of computation, then $X$ should also be a model of computation.}
+    \emph{if $X$ nicely generalises a model among \ref{ct1} to \ref{ct3} and the Church-Turing thesis says that the object of generalisation is a model of computation, then $X$ should also be a model of (generalised) computation.}
 \end{quote}
 This kind of arguments often lead to unintuitive definitions insofar as computation is concerned, sometimes to the extent of an apology being issued (e.g. \cite{sackserec}). Indeed, modern intuition of computation has evolved to become rather high-level, and the models which motivated the Church-Turing thesis have been relegated to play the roles of convenient mathematical foundations, instead of anything resembling practical mental models of computation.
 
-Perhaps the most celebrated attempt at amalgamating and formalising useful mental models of computations and algorithms, comes in the form of a series of papers (starting with \cite{gurevich}) by Gurevich on abstract state machines. Abstract state machines far more closely resemble ``high-level'' meta-theoretic representations of Plotkin-style semantics (found e.g. in \cite{plotkin}), than they do anything among \ref{ct1} to \ref{ct3}. That these machines have been adapted for use in fields ranging from software development to systems engineering is testament to the intuitiveness of their design. Having said that, how well they are equipped to handle the intuition of computations on infinite sets is yet to be vigorously tested, for literature in this respect is scarce.
+Perhaps the most celebrated attempt at amalgamating and formalising useful mental models of computations and algorithms, comes in the form of a series of papers (starting with \cite{gurevich}) by Gurevich on abstract state machines. Abstract state machines far more closely resemble ``high-level'' meta-theoretic representations of Plotkin-style semantics (found e.g. in \cite{plotkin}), than they do anything among \ref{ct1} to \ref{ct3}. That these machines have been adapted for use in fields ranging from software development to systems engineering is testament to the intuitiveness of their design. Having said that, how well they are equipped to handle philosophical demands of computing with infinite sets is yet to be vigorously tested, for their applications have so far been finitary in nature.
+
+In this paper, we investigate the promise of abstract state machines in infinitary computations. We make well-meaning restrictions to their definition along the way, so that they are better endowed with our intuition of computation born out of classical computing. 
 
 \subsection{Generalising Computability}\label{subsec22}
 
-A notion of computability is meant to chart the limits of what can and cannot be computed. In the classical case, we hold the Church-Turing thesis philosophically responsible for this purpose, a responsibility rooted in its convincing representation of computer-hood. Indeed, the hallowed status afforded to the Church-Turing thesis stems from the unlikely convergence in power of what seems to be independently-devised models of computation.
+A notion of computability is meant to chart the limits of what can and cannot be computed. In the classical case, we hold the Church-Turing thesis responsible for this purpose, a responsibility rooted in its convincing portrayal of computer-hood. Indeed, the hallowed status afforded to the Church-Turing thesis stems from the unlikely convergence in power of what seems to be independently-devised models of computation.
 
-Certain models of computation (with simple modifications) naturally induce a notion of relative computability on a set bigger than the natural numbers. Such a relative computability relation typically extends the notion of computability, in that being computable is equivalent to being minimally relative computable. A most notable example is the Turing reducibility relation induced by oracle machines, which are essentially Turing machines equipped with quick access to a real number serving as an oracle. 
+Certain models of computation (perhaps with simple modifications) naturally induce a notion of relative computability on some distinguished set. Such a relative computability relation typically extends the notion of computability, in that being computable is equivalent to being minimally relative computable. A most notable example is the Turing reducibility relation induced by oracle machines, which are essentially Turing machines equipped with quick access to a real number serving as an ``oracle''. 
 
 It can be argued that a robust model of generalised computation should induce a (binary) relative computability relation on arbitrary sets, and that the relative computability relation thus induced should satisfy the following three desiderata.
 \begin{enumerate}[leftmargin=40pt, label=(D\arabic*)]
@@ -160,14 +162,15 @@ It can be argued that a robust model of generalised computation should induce a 
 \end{enumerate}
 The astute reader might ask, ``should universality in \ref{d1} not require the inclusion of literally all sets in the domain of the relation?'' The truth is, \ref{d1} is phrased this way for convenience of analysis. Note that there is little substantive compromise in this apparently weaker presentation, because every set can be simply encoded into a binary string, according to Proposition \ref{prop22}. We shall assume that the designation of \ref{d2} and \ref{d3} as desiderata is intuitive, if not self-evident. Unsurprisingly, each of the well-known models of generalised computation introduced in the previous subsection induces relative computability relation on sets. Let us now briefly check \ref{d1} to \ref{d3} against these relations.
 
-The relative computability relation associated with $\alpha$-recursion, written $\leq_{\alpha}$, is only defined on $\mathcal{P}(\alpha)$, the powerset of $\alpha$. As such, it is not universal. Naively, we can define a universal relation $\leq_A$ by referring to $\leq_{\alpha}$ as $\alpha$ ranges over all \textit{admissible} ordinals: $$A \leq_A B \text{ iff there is } \alpha \text{ for which } A \leq_{\alpha} B \text{.}$$ However, interpreting $\alpha$ to be a measure of the amount of computational resources available, as is natural, Theodore Slaman's answer in \cite{slaman} tells us $\leq_A$ is doomed to be incoherent. It seems, then, that there is no easy fix to the non-universality of the $\leq_{\alpha}$'s.
+The relative computability relation associated with $\alpha$-recursion, written $\leq_{\alpha}$, is only defined on $\mathcal{P}(\alpha)$, the powerset of $\alpha$. As such, it is not universal. Naively, we can define a universal relation $\leq_A$ by referring to $\leq_{\alpha}$ as $\alpha$ ranges over all \textit{admissible} ordinals: $$A \leq_A B \text{ iff there is } \alpha \text{ for which } A \leq_{\alpha} B \text{.}$$ However, if we interpret $\alpha$ to be a measure of the amount of computational resources available, as is natural, Theodore Slaman's answer in \cite{slaman} tells us $\leq_A$ is doomed to be incoherent. It seems, then, that there is no easy fix to the non-universality of the $\leq_{\alpha}$'s.
 
-On the other hand, the relative computability relation of $E$-recursion, written $\leq_E$, is both universal and transitive out of the box. Further, it is common in $E$-recursion to study ``runs'' restricted to arbitrary $E$\textit{-recursively closed} initial segment of $L$. Restrictions of this type are regarded as computational constraints imposed on the evaluation of $\leq_E$. Unfortunately, with respect to these constraints, $\leq_E$ is not known to behave coherently (see e.g. ``\textbf{The Divergence-Admissibility Split}'' on p.11 of \cite{sackserec}).
+On the other hand, the relative computability relation of $E$-recursion, written $\leq_E$, is both universal and transitive out of the box. Further, it is common in $E$-recursion to study ``runs'' restricted to arbitrary $E$\textit{-recursively closed} initial segment of $L$. Restrictions of this type are computational constraints imposed on the evaluation of $\leq_E$. Unfortunately, with respect to these constraints, $\leq_E$ is not known to behave coherently (see e.g. ``\textbf{The Divergence-Admissibility Split}'' on p.11 of \cite{sackserec}).
 
 Taking a leaf from how classical Turing machines were modified to become classical oracle machines, we can straightforwardly augment ordinal Turing machines with set oracles. This allows one to define a relative computability relation $\preceq_A$ on arbitrary sets in the same way real oracles are used to define the Turing reducibility relation on the reals. In fact, with reference to $\preceq_{\alpha}$ in Definition 19 of \cite{koepke2}, $$A \preceq_A B \text{ iff there is } \alpha \text{ for which } A \preceq_{\alpha} B \text{.}$$ Such a definition is easily seen to be universal and coherent. It is stated in Theorem 20 of \cite{koepke2} that restricting this relative computability relation to subsets of admissible ordinals $\alpha$ may result in a lack of transitivity. We can however verify that $\preceq_{\alpha}$ is transitive whenever $\alpha$ is regular, and in turn, use it to conclude the transitivity of $\preceq_A$.
 
 \begin{table}[!htp]
     \caption{The relative computable relations native to three major models of generalised computation.}
+    \label{table1}
     \centering
     \begin{tabular}{|l||*{3}{c|}}\hline
         \backslashbox[90pt]{\footnotesize Property}{\footnotesize Relation}
@@ -192,9 +195,9 @@ Taking a leaf from how classical Turing machines were modified to become classic
     \end{tabular}
 \end{table}
 
-Preliminary investigations into the limits of their computational power quickly uncover something philosophically unsatisfying, if not unsettling. This spurs us into modifying the definition of an abstract state machine to better represent set computation.
+Unlike the previous models of generalised computation, abstract state machines were not designed with any form of relative computability in mind. In fact, in the name of generality, the definition of an abstract state machine does not even specify the existence of canonical inputs or outputs, which are typically integral to associating a relative computability relation with a computational model. Further, preliminary investigations into the limits of their computational power quickly uncover something philosophically unsatisfying, if not unsettling. We seek to correct this with our restrictions to the definition of abstract state machines.
 
-Our modifications result in a new type of machine (abbreviated to RASMP) that possesses more concrete guardrails than abstract state machines, without losing too much intuitiveness. Coupled with an input/output paradigm, RASMPs naturally induce a relative computability relation on all sets, which can then be used to define (generalised) computable sets. It turns out that the degrees born from this relation coincide with the degrees of constructibility. In addition, the relation satisfies transitivity when restricted to reasonably nice sets. The upshot of all this, is a model of set computation which avoids the drawbacks of other models highlighted in the preceding paragraphs. It may not be the best model to do recursion theory in, nor does it claim to be the easiest model to analyse, but we hope more work can be done in the future to explore its limits.
+The way restrictions are added to the notion of abstract state machines results in a new model of generalised computation called \textit{restricted abstract state machines with parameters} (abbreviated as \textit{RASMPs}). The main draw of RASMPs is that they possess more concrete guardrails than abstract state machines without compromising too much of the latter's intuitiveness. Coupled with an input/output paradigm, RASMPs naturally induce a relative computability relation, $\leq^P$, on all sets of ordinals. It turns out that $\leq^P$ coincides with both $\preceq_A$ as well as the \textit{relative constructibility} relation. Unlike $\preceq_A$ though, $\leq^P$ tends very much to remain transitive under computational constraints. This makes for interesting comparisons between $\leq^P$ and say, the relations in Table \ref{table1}, when size limitations are imposed.
 
 \section{Restricting Abstract State Machines}\label{sect2}
 
@@ -1483,7 +1486,7 @@ It is not difficult to check that modifying Example \ref{ex228} by substituting 
 \end{proof}
 
 \begin{defi}[Koepke, \cite{koepke2}]
-Let $\alpha$ be a limit ordinal. A set $B \subset \alpha$ is $\alpha$\emph{-computable in} $A \subset \alpha$, denoted $B \preceq_{\alpha} A$, iff there is an $\alpha$-machine $M$ for which
+Let $\alpha$ be a limit ordinal. A set $B \subset \alpha$ is $\alpha$\emph{-computable in} $A \subset \alpha$ --- denoted $B \preceq_{\alpha} A$ --- iff there is an $\alpha$-machine $M$ for which
 \begin{enumerate}[label=(\arabic*)]
     \item $M$ halts on input $\langle \{\beta\}, A \rangle$ for all $\beta < \alpha$, and
     \item $B = \{\beta < \alpha : M(\langle \{\beta\}, A \rangle) = 1\}$.
