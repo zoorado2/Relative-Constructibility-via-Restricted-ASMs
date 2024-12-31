@@ -223,6 +223,35 @@
       \field{pages}{567\bibrangedash 604}
       \range{pages}{38}
     \endentry
+    \entry{borger}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f4869689997fda797de4babd7c46dd0a}{%
+           family={Börger},
+           familyi={B\bibinitperiod},
+           given={Egon},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{f4869689997fda797de4babd7c46dd0a}
+      \strng{fullhash}{f4869689997fda797de4babd7c46dd0a}
+      \strng{bibnamehash}{f4869689997fda797de4babd7c46dd0a}
+      \strng{authorbibnamehash}{f4869689997fda797de4babd7c46dd0a}
+      \strng{authornamehash}{f4869689997fda797de4babd7c46dd0a}
+      \strng{authorfullhash}{f4869689997fda797de4babd7c46dd0a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Univers. Comput. Sci.}
+      \field{number}{1}
+      \field{title}{The Origins and the Development of the ASM Method for High Level System Design and Analysis.}
+      \field{volume}{8}
+      \field{year}{2002}
+      \field{pages}{2\bibrangedash 74}
+      \range{pages}{73}
+    \endentry
     \entry{gurevichblass}{article}{}
       \name{author}{2}{}{%
         {{hash=e4be97472702d5f94b6d5fd932ccedd9}{%
@@ -256,6 +285,35 @@
       \field{year}{2003}
       \field{pages}{578\bibrangedash 651}
       \range{pages}{74}
+    \endentry
+    \entry{borgerbook}{book}{}
+      \name{author}{2}{}{%
+        {{hash=2fe2b99de0ab569878c11e56a6b8695c}{%
+           family={Borger},
+           familyi={B\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cebf378d36a71eaa6175d54ff3154a25}{%
+           family={Stark},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima F},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{e6bbac438cc7562e4a66309c272f557f}
+      \strng{fullhash}{e6bbac438cc7562e4a66309c272f557f}
+      \strng{bibnamehash}{e6bbac438cc7562e4a66309c272f557f}
+      \strng{authorbibnamehash}{e6bbac438cc7562e4a66309c272f557f}
+      \strng{authornamehash}{e6bbac438cc7562e4a66309c272f557f}
+      \strng{authorfullhash}{e6bbac438cc7562e4a66309c272f557f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Abstract State Machines: A Method for High-Level System Design and Analysis}
+      \field{year}{2003}
     \endentry
     \entry{jech}{book}{}
       \name{author}{1}{}{%
