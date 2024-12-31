@@ -138,13 +138,13 @@ From the perspective of recursion theory, where the structure of Turing degrees 
 
 From the perspective of ``computer as a machine'', we have Koepke's ordinal Turing machines (see \cite{koepke1}). Ordinal Turing machines are a generalisation of \ref{ct3}: they work like standard Turing machines, except their tapes are now $ORD$-length and they can each refer to finitely many ordinals as parameters. 
 
-In any case, the models of generalised computation introduced hitherto rely very much on the Church-Turing thesis for justification of properness. Such justification usually goes along the lines of,
+In any case, it appears that the models of generalised computation introduced hitherto rely very much on the Church-Turing thesis for justification of properness. Such justification usually goes along the lines of,
 \begin{quote}
     \emph{if $X$ nicely generalises a model among \ref{ct1} to \ref{ct3} and the Church-Turing thesis says that the object of generalisation is a model of computation, then $X$ should also be a model of (generalised) computation.}
 \end{quote}
 This kind of arguments often lead to unintuitive definitions insofar as computation is concerned, sometimes to the extent of an apology being issued (e.g. \cite{sackserec}). Indeed, modern intuition of computation has evolved to become rather high-level, and the models which motivated the Church-Turing thesis have been relegated to play the roles of convenient mathematical foundations, instead of anything resembling practical mental models of computation.
 
-Perhaps the most celebrated attempt at amalgamating and formalising useful mental models of computations and algorithms, comes in the form of a series of papers (starting with \cite{gurevich}) by Gurevich on abstract state machines. Abstract state machines far more closely resemble ``high-level'' meta-theoretic representations of Plotkin-style semantics (found e.g. in \cite{plotkin}), than they do anything among \ref{ct1} to \ref{ct3}. That these machines have been adapted for use in fields ranging from software development to systems engineering is testament to the intuitiveness of their design. Having said that, how well they are equipped to handle philosophical demands of computing with infinite sets is yet to be vigorously tested, for their applications have so far been finitary in nature.
+Perhaps the most celebrated attempt at amalgamating and formalising useful mental models of computations and algorithms, comes in the form of a series of papers (starting with \cite{gurevich}) by Gurevich on abstract state machines. Abstract state machines far more closely resemble ``high-level'' meta-theoretic representations of Plotkin-style semantics (found e.g. in \cite{plotkin}), than they do anything among \ref{ct1} to \ref{ct3}. That these machines have been adapted for use in fields ranging from software development to systems engineering via (what is now known as) the \textit{ASM method} is testament to the intuitiveness of their design. Historical details regarding the ASM method can be found in \cite{borger} and Chapter 9 of \cite{borgerbook}. Having said all that, how well abstract state machines are equipped to handle the philosophical demands of computing with infinite sets is yet to be vigorously tested, for their applications have so far been finitary in nature.
 
 In this paper, we investigate the promise of abstract state machines in infinitary computations. We make well-meaning restrictions to their definition along the way, so that they are better endowed with our intuition of computation born out of classical computing. 
 
@@ -160,7 +160,7 @@ It can be argued that a robust model of generalised computation should induce a 
     \item\label{d2} \textit{Transitivity}: the relation should be transitive.
     \item\label{d3} \textit{Coherence}: if the relative computability of two sets is witnessed under known computational constraints, then the same should be witnessed after lifting these constraints.
 \end{enumerate}
-The astute reader might ask, ``should universality in \ref{d1} not require the inclusion of literally all sets in the domain of the relation?'' The truth is, \ref{d1} is phrased this way for convenience of analysis. Note that there is little substantive compromise in this apparently weaker presentation, because every set can be simply encoded into a binary string, according to Proposition \ref{prop22}. We shall assume that the designation of \ref{d2} and \ref{d3} as desiderata is intuitive, if not self-evident. Unsurprisingly, each of the well-known models of generalised computation introduced in the previous subsection induces relative computability relation on sets. Let us now briefly check \ref{d1} to \ref{d3} against these relations.
+The astute reader might ask, ``should universality in \ref{d1} not require the inclusion of literally all sets in the domain of the relation?'' The truth is, \ref{d1} is phrased this way for convenience of analysis. Note that there is little substantive compromise in this apparently weaker presentation, because every set can be simply encoded into a binary string, according to Proposition \ref{prop22}. We shall assume that the designation of \ref{d2} and \ref{d3} as desiderata is intuitive, if not self-evident. Unsurprisingly, each of the well-known models of generalised computation introduced in the previous subsection induces relative computability relation on sets. We shall examine whether these relations satisfy properties \ref{d1} to \ref{d3}. The next three paragraphs contain an elaboration of our examination, and Tables \ref{table1} and \ref{table2}, a summary of its outcomes.
 
 The relative computability relation associated with $\alpha$-recursion, written $\leq_{\alpha}$, is only defined on $\mathcal{P}(\alpha)$, the powerset of $\alpha$. As such, it is not universal. Naively, we can define a universal relation $\leq_A$ by referring to $\leq_{\alpha}$ as $\alpha$ ranges over all \textit{admissible} ordinals: $$A \leq_A B \text{ iff there is } \alpha \text{ for which } A \leq_{\alpha} B \text{.}$$ However, if we interpret $\alpha$ to be a measure of the amount of computational resources available, as is natural, Theodore Slaman's answer in \cite{slaman} tells us $\leq_A$ is doomed to be incoherent. It seems, then, that there is no easy fix to the non-universality of the $\leq_{\alpha}$'s.
 
@@ -184,6 +184,7 @@ Taking a leaf from how classical Turing machines were modified to become classic
 
 \begin{table}[!htp]
     \caption{Two universal relative computability relations derived from separate classes of non-universal relations.}
+    \label{table2}
     \centering
     \begin{tabular}{|l||*{2}{c|}}\hline
         \backslashbox[90pt]{\footnotesize Property}{\footnotesize Relation}
@@ -1664,10 +1665,13 @@ for any admissible ordinal $\alpha$, and the inclusions cannot be reversed in ge
 \begin{equation}\label{eq2}
     \leq_{\alpha} \ \subset \ \leq_{w \alpha} \ \subset \ \preceq_{\alpha} \ \subset \ \leq^P_{\alpha}
 \end{equation}
-for admissible ordinals $\alpha$. The last inclusion cannot be reversed in general because $\leq^P_{\alpha}$ is transitive for all admissible $\alpha$ but $\preceq_{\alpha}$ is not. On the other hand, it is clear that $\leq^{P, s}_{\alpha} \ \subset \ \leq^P_{\alpha}$ for all limit $\alpha$, and the reverse is not true due to Lemmas \ref{lem269} and \ref{lem273}. Further, for admissible $\alpha$, $\leq_{w \alpha} \ \neq \ \leq^{P, s}_{\alpha} \ \neq \ \preceq_{\alpha}$ in general because $\leq^{P, s}_{\alpha}$ is transitive unlike the other two relations. We know $\leq^{P, s}_{\alpha} \ \neq \ \leq_{\alpha}$ in general because $\leq^{P, s}_{\alpha}$ is upward absolute in the sense of Proposition \ref{prop252}, but $\leq_{\alpha}$ is not by Theodore Slaman's answer in \cite{slaman}. 
+for admissible ordinals $\alpha$. The last inclusion cannot be reversed in general because $\leq^P_{\alpha}$ is transitive for all admissible $\alpha$ but $\preceq_{\alpha}$ is not. On the other hand, it is clear that $\leq^{P, s}_{\alpha} \ \subset \ \leq^P_{\alpha}$ for all limit $\alpha$, and the reverse is not true due to Lemmas \ref{lem269} and \ref{lem273}. Further, for admissible $\alpha$, $\leq_{w \alpha} \ \neq \ \leq^{P, s}_{\alpha} \ \neq \ \preceq_{\alpha}$ in general because $\leq^{P, s}_{\alpha}$ is transitive unlike the other two relations. We know $\leq^{P, s}_{\alpha} \ \neq \ \leq_{\alpha}$ in general because $\leq^{P, s}_{\alpha}$ is upward consistent in the sense of Proposition \ref{prop252}, but $\leq_{\alpha}$ is not by Theodore Slaman's answer in \cite{slaman}. 
+
+Table \ref{table3} summarises the similarities and differences among the relations $\leq^{P, s}_{\alpha}$, $\leq^P_{\alpha}$, $\leq_{\alpha}$ and $\preceq_{\alpha}$. When we say a relation possesses the property of ``oracle-analogue'', we mean that the definition of said relation depends on --- or makes reference to --- some object analogous to the oracle in the definition of classical oracle machines.
 
 \begin{table}[!htp]
     \caption{Comparing two of our relative computability relations with more standard ones in the of study generalised computability, at arbitrary admissible ordinals $\alpha$.}
+    \label{table3}
     \centering
     \begin{tabular}{|l||*{4}{c|}}\hline
         \backslashbox[110pt]{\footnotesize Property}{\footnotesize Relation}
