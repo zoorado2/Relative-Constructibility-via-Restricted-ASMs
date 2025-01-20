@@ -362,42 +362,41 @@ Difficulty \ref{diff29} tells us $S(\mathfrak{M})$ should depend not just on $b(
 
 \begin{defi}(Lau, \cite{myself})
 A \emph{first-order theory with constraints in interpretation} (\emph{first-order TCI}) --- henceforth, just \emph{theory with constraints in interpretation} (\emph{TCI}) --- is a tuple $(T, \sigma, \dot{\mathcal{U}}, \vartheta)$, where
-\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
     \item $T$ is a first order theory with signature $\sigma$,
     \item $\dot{\mathcal{U}}$ is a unary relation symbol not in $\sigma$,
-    \item $\vartheta$ is a function (the \emph{interpretation constraint map}) with domain $\sigma \cup \{\dot{\mathcal{U}}\}$, 
+    \item $\vartheta$ is a function (the \emph{constraint function}) with domain $\sigma \cup \{\dot{\mathcal{U}}\}$, 
     \item if $x \in ran(\vartheta)$, then there is $y$ such that 
-    \begin{itemize}[label=$\circ$]
+    \begin{enumerate}[label=(\roman*)]
         \item either $x = (y, 0)$ or $x = (y, 1)$, and
         \item if $\vartheta(\dot{\mathcal{U}}) = (z, a)$, then $y \subset z^n$ for some $n < \omega$, and
-    \end{itemize}
+    \end{enumerate}
     \item if $\vartheta(\dot{\mathcal{U}}) = (z, a)$, then 
-    \begin{itemize}[label=$\circ$]
+    \begin{enumerate}[label=(\roman*)]
         \item $z \cap z^n = \emptyset$ whenever $1 < n < \omega$, and
         \item $z^m \cap z^n = \emptyset$ whenever $1 < m < n < \omega$.
-    \end{itemize}
-\end{itemize}
+    \end{enumerate}
+\end{enumerate}
+We call members of the interpretation constraint map \emph{interpretation constraints}.
 \end{defi}
 
-We call members of the interpretation constraint map \emph{interpretation constraints}.
-
 \begin{defi}(Lau, \cite{myself})
-Let $(T, \sigma, \dot{\mathcal{U}}, \vartheta)$ be a TCI. We say $\mathcal{M} := (U; \mathcal{I}) \models^* (T, \sigma, \dot{\mathcal{U}}, \vartheta)$ --- or $\mathcal{M}$ \emph{models} $(T, \sigma, \dot{\mathcal{U}}, \vartheta)$ --- iff all of the following holds:
-\begin{itemize}
+Let $(T, \sigma, \dot{\mathcal{U}}, \vartheta)$ be a TCI. We say $$\mathcal{M} := (U; \mathcal{I}) \models^* (T, \sigma, \dot{\mathcal{U}}, \vartheta)$$ --- or $\mathcal{M}$ \emph{models} $(T, \sigma, \dot{\mathcal{U}}, \vartheta)$ --- iff all of the following holds:
+\begin{enumerate}[label=(\alph*)]
     \item $\mathcal{M}$ is a structure,
     \item $\sigma$ is the signature of $\mathcal{M}$,
     \item $\mathcal{M} \models T$,
     \item if $\vartheta(\dot{\mathcal{U}}) = (y, 0)$, then $U \subset y$,
     \item if $\vartheta(\dot{\mathcal{U}}) = (y, 1)$, then $U = y$, and
     \item for $\dot{X} \in \sigma$,
-    \begin{itemize}[label=$\circ$]
+    \begin{enumerate}[label=(\roman*)]
         \item if $\dot{X}$ is a constant symbol and $\vartheta(\dot{X}) = (y, z)$, then $\mathcal{I}(\dot{X}) \in y \cap U$,
-        \item if $\dot{X}$ is an $n$-ary relation symbol and $\vartheta(\dot{X}) = (y, 0)$, then $\mathcal{I}(\dot{X}) \subset y \cap U^{n}$,
-        \item if $\dot{X}$ is an $n$-ary relation symbol and $\vartheta(\dot{X}) = (y, 1)$, then $\mathcal{I}(\dot{X}) = y \cap U^{n}$,
-        \item if $\dot{X}$ is an $n$-ary function symbol and $\vartheta(\dot{X}) = (y, 0)$, then $$\{z \in U^{n+1} : \mathcal{I}(\dot{X})(z \! \restriction_n) = z(n)\} \subset y \cap U^{n+1}, \text{ and}$$
-        \item if $\dot{X}$ is an $n$-ary function symbol and $\vartheta(\dot{X}) = (y, 1)$, then $$\{z \in U^{n+1} : \mathcal{I}(\dot{X})(z \! \restriction_n) = z(n)\} = y \cap U^{n+1}.$$
-    \end{itemize}
-\end{itemize}
+        \item if $\dot{X}$ is a $n$-ary relation symbol and $\vartheta(\dot{X}) = (y, 0)$, then $\mathcal{I}(\dot{X}) \subset y \cap U^{n}$,
+        \item if $\dot{X}$ is a $n$-ary relation symbol and $\vartheta(\dot{X}) = (y, 1)$, then $\mathcal{I}(\dot{X}) = y \cap U^{n}$,
+        \item if $\dot{X}$ is a $n$-ary function symbol and $\vartheta(\dot{X}) = (y, 0)$, then $$\{z \in U^{n+1} : \mathcal{I}(\dot{X})(z \! \restriction_n) = z(n)\} \subset y \cap U^{n+1}, \text{ and}$$
+        \item if $\dot{X}$ is a $n$-ary function symbol and $\vartheta(\dot{X}) = (y, 1)$, then $$\{z \in U^{n+1} : \mathcal{I}(\dot{X})(z \! \restriction_n) = z(n)\} = y \cap U^{n+1}.$$
+    \end{enumerate}
+\end{enumerate}
 We say $(T, \sigma, \dot{\mathcal{U}}, \vartheta)$ has a model if there exists $\mathcal{M}$ for which $\mathcal{M} \models^* (T, \sigma, \dot{\mathcal{U}}, \vartheta)$.
 \end{defi}
 
