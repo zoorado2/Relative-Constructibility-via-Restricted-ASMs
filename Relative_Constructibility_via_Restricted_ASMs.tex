@@ -168,7 +168,7 @@ On the other hand, the relative computability relation of $E$-recursion, written
 
 Taking a leaf from how classical Turing machines were modified to become classical oracle machines, we can straightforwardly augment ordinal Turing machines with set oracles. This allows one to define a relative computability relation $\preceq_A$ on arbitrary sets in the same way real oracles are used to define the Turing reducibility relation on the reals. In fact, with reference to $\preceq_{\alpha}$ in Definition 19 of \cite{koepke2}, $$A \preceq_A B \text{ iff there is } \alpha \text{ for which } A \preceq_{\alpha} B \text{.}$$ Such a definition is easily seen to be universal and coherent. It is stated in Theorem 20 of \cite{koepke2} that restricting this relative computability relation to subsets of admissible ordinals $\alpha$ may result in a lack of transitivity. We can however verify that $\preceq_{\alpha}$ is transitive whenever $\alpha$ is regular, and in turn, use it to conclude the transitivity of $\preceq_A$.
 
-\begin{table}[!htp]
+\begin{table}
     \caption{The relative computable relations native to three major models of generalised computation.}
     \label{table1}
     \centering
@@ -182,7 +182,7 @@ Taking a leaf from how classical Turing machines were modified to become classic
     \end{tabular}
 \end{table}
 
-\begin{table}[!htp]
+\begin{table}
     \caption{Two universal relative computability relations derived from separate classes of non-universal relations.}
     \label{table2}
     \centering
@@ -298,11 +298,11 @@ as $\sigma(A, 2)$.
 \begin{defi}
 Let $\mathfrak{A}_0$ and $\mathfrak{A}_1$ be first-order structures with the same base set $A$ and signature $\sigma$. Let $\ulcorner X \urcorner \in \sigma(A, 2)$.
 Define
-\begin{itemize}
-    \item $X^{(\mathfrak{A}_0, \mathfrak{A}_1)} := a$ if $\ulcorner X \urcorner = \ulcorner a \urcorner$ for some $a \in A$,
-    \item $X^{(\mathfrak{A}_0, \mathfrak{A}_1)} := Y^{\mathfrak{A}_0}$ if $\ulcorner X \urcorner = \ulcorner Y_0 \urcorner$ for some $\ulcorner Y \ulcorner \in \sigma$, and
-    \item $X^{(\mathfrak{A}_0, \mathfrak{A}_1)} := Y^{\mathfrak{A}_1}$ if $\ulcorner X \urcorner = \ulcorner Y_1 \urcorner$ for some $\ulcorner Y \ulcorner \in \sigma$.
-\end{itemize}
+\begin{align*}
+    X^{(\mathfrak{A}_0, \mathfrak{A}_1)} := \ & a \text{ if } \ulcorner X \urcorner = \ulcorner a \urcorner \text{ for some } a \in A \text{,} \\
+    X^{(\mathfrak{A}_0, \mathfrak{A}_1)} := \ & Y^{\mathfrak{A}_0} \text{ if } \ulcorner X \urcorner = \ulcorner Y_0 \urcorner \text{ for some } \ulcorner Y \urcorner \in \sigma \text{, and} \\
+    X^{(\mathfrak{A}_0, \mathfrak{A}_1)} := \ & Y^{\mathfrak{A}_1} \text{ if } \ulcorner X \urcorner = \ulcorner Y_1 \urcorner \text{ for some } \ulcorner Y \urcorner \in \sigma \text{.}
+\end{align*}
 If $\ulcorner f \urcorner \in \sigma(A, 2)$ is a function symbol and $t$ is a term over $\sigma(A, 2)$ of which interpretation under $(\mathfrak{A}_0, \mathfrak{A}_1)$ is known, then 
 \begin{equation*}
     f(t)^{(\mathfrak{A}_0, \mathfrak{A}_1)} := f^{(\mathfrak{A}_0, \mathfrak{A}_1)}(t^{(\mathfrak{A}_0, \mathfrak{A}_1)}) \text{.}
@@ -311,13 +311,13 @@ If $\ulcorner f \urcorner \in \sigma(A, 2)$ is a function symbol and $t$ is a te
 
 \begin{defi}
 Let $\mathfrak{A}_0$ and $\mathfrak{A}_1$ be first-order structures with the same base set $A$ and signature $\sigma$. We define what $(\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \phi$ means for $\phi \in \sigma(A, 2)$ by recursion on the complexity of $\phi$.
-\begin{itemize}
+\begin{enumerate}[label=(\arabic*)]
     \item If $\phi = \ulcorner t_1 = t_2 \urcorner$ for terms $t_1, t_2$ over $\sigma(A, 2)$, then $$(\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \phi \text{ iff } t_1^{(\mathfrak{A}_0, \mathfrak{A}_1)} = t_2^{(\mathfrak{A}_0, \mathfrak{A}_1)} \text{.}$$
     \item If $\phi = \ulcorner R(t_1, \dots, t_n) \urcorner$ for a relation symbol $\ulcorner R \urcorner \in \sigma(A, 2)$ and terms $t_1, \dots, t_n$ over $\sigma(A, 2)$, then $$(\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \phi \text{ iff } R^{(\mathfrak{A}_0, \mathfrak{A}_1)} (t_1^{(\mathfrak{A}_0, \mathfrak{A}_1)}, \dots, t_n^{(\mathfrak{A}_0, \mathfrak{A}_1)}) \text{.}$$
     \item If $\phi = \ulcorner \neg \psi \urcorner$ for a formula $\psi$ over $\sigma(A, 2)$, then $$(\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \phi \text{ iff } \neg ((\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \psi) \text{.}$$
     \item If $\phi = \ulcorner \psi_1 \wedge \psi_2 \urcorner$ for formulas $\psi_1$ and $\psi_2$ over $\sigma(A, 2)$, then $$(\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \phi \text{ iff } ((\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \psi_1 \wedge (\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \psi_2) \text{.}$$
     \item If $\phi = \ulcorner \exists x \ \psi \urcorner$ for a free variable $\ulcorner x \urcorner$ and a formula $\psi$ over $\sigma(A, 2)$, then $$(\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \phi \text{ iff } \exists a \in A ((\mathfrak{A}_0, \mathfrak{A}_1) \models_2 \psi[x \mapsto a]) \text{,}$$ where $\psi[x \mapsto a]$ is the result of replacing all instances of $\ulcorner x \urcorner$ in $\psi$ by $\ulcorner a \urcorner$.
-\end{itemize}
+\end{enumerate}
 \end{defi}
 
 Before adding more requirements to the transition function of an ASM, let us enforce that every state in an ASM $\mathfrak{M}$ must have the same base set $b(\mathfrak{M})$. This can be done without loss of generality in the original definition of an ASM, because we can extend the base set of each state in $\mathfrak{M}$ to be the union of the base sets of states in $\mathfrak{M}$, while arbitrarily extending the interpretation of function and relation symbols in the signature by each state.
@@ -443,12 +443,12 @@ Define
     & s \models \ulcorner h = \langle 0 \rangle \wedge t = \langle 0 \rangle \urcorner \text{ and } \\
     & s \models \ulcorner \exists x \ (R(x)) \wedge \forall x \ \forall y \ (R(x) \wedge R(y) \implies x = y) \urcorner\} \text{.}
 \end{align*}
-Each member of $I(\mathfrak{M})$ represents an initial configuration of $M$ with \begin{itemize}
+Each member of $I(\mathfrak{M})$ represents an initial configuration of $M$ with \begin{enumerate}[label=(\alph*)]
     \item the read/write head at the $0$-th cell of the tape, 
     \item the current state being the initial state, 
     \item `$1$' written on exactly one cell of the tape, and
     \item `$0$' written on all other cells of the tape.
-\end{itemize} 
+\end{enumerate} 
 More specifically, `$1$' appears on the $k$-th cell of $M$'s tape in an initial configuration iff $M$ takes $k$ as input.
 
 We are almost done with specifying our ASM $\mathfrak{M}$; the only thing left to do is to give a transition function $\tau_{\mathfrak{M}}$ accurately representing transitions among the Turing configurations of $M$. It suffices to concoct a suitable sentence $\phi^{\tau}_{\mathfrak{M}}$ based on the transition function $$\delta : \{c_i : i < n-1\} \times 2 \longrightarrow \{c_i : i < n\} \times 2 \times \{\mathrm{left}, \mathrm{right}\}$$ of $M$. For each pair $(j, k) \in n \times 2$, let
@@ -487,6 +487,7 @@ A sentence $\phi$ in the language of set theory with set parameters is \emph{abs
     \item $(A; \in)$ and $(B; \in)$ are transitive models of $\mathsf{ZFC}$, and
     \item all parameters of $\phi$ are members of $A$,
 \end{itemize}
+it must be the case that
 \begin{equation*}
     (A; \in) \models \phi \iff (B; \in) \models \phi \text{.}
 \end{equation*}
@@ -498,6 +499,7 @@ Let $\phi$ be a formula in the language of set theory, with set parameters and f
     \item $(A; \in)$ is a transitive model of $\mathsf{ZFC}$, and
     \item all parameters of $\phi$ are members of $A$,
 \end{itemize}
+it must be the case that
 \begin{equation*}
      \{(a_1, \dots, a_n) \in A^n : (A; \in) \models \phi[x_1 \mapsto a_1, \dots, x_n \mapsto a_n]\} = R \cap A \text{.}
 \end{equation*}
@@ -517,7 +519,7 @@ At this point, it is useful to make precise Gurevich's bounded exploration postu
 
 \begin{defi}
 Let $\mathfrak{M}$ be an ASM and $s \in S(\mathfrak{M})$. Define $\Delta_{\mathfrak{M}}(s)$ to be the unique function from $\sigma(\mathfrak{M})$ into $\mathcal{P}(b(\mathfrak{M}))$ such that
-\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
     \item if $\ulcorner X \urcorner \in \sigma(\mathfrak{M})$ is an $n$-ary function symbol, then 
     \begin{equation*}
         \Delta_{\mathfrak{M}}(s)(\ulcorner X \urcorner) = \{\Vec{z} \in b(\mathfrak{M})^n : \ulcorner X \urcorner^{s}(\Vec{z}) \neq \ulcorner X \urcorner^{\tau_{\mathfrak{M}}(s)}(\Vec{z})\} \text{,}
@@ -534,7 +536,7 @@ Let $\mathfrak{M}$ be an ASM and $s \in S(\mathfrak{M})$. Define $\Delta_{\mathf
             b(\mathfrak{M}) & \text{otherwise.}
         \end{cases}
     \end{equation*}
-\end{itemize}
+\end{enumerate}
 Note that if $b(\mathfrak{M}) = \emptyset$, then $S(\mathfrak{M})$ is a singleton and for every $s \in S(\mathfrak{M})$, $\tau_{\mathfrak{M}}(s) = s$. Necessarily, any such $\mathfrak{M}$ must have $\Delta_{\mathfrak{M}}(s_0) = \Delta_{\mathfrak{M}}(s_1)$ for all $s_0, s_1 \in S(\mathfrak{M})$.
 \end{defi}
 
@@ -575,7 +577,7 @@ With the aforementioned flaws to \ref{def217} in mind, we seek to reformulate th
 
 \begin{defi}\label{def220}
 Let $\sigma$ be a signature. We say a sentence $\phi$ over $2 \cdot \sigma$ is \emph{bounded for} $\sigma$ iff for each $\ulcorner X \urcorner \in \sigma$ there are $\phi^{\ulcorner X \urcorner}$ and $\psi^{\ulcorner X \urcorner}$ such that
-\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
     \item $\phi^{\ulcorner X \urcorner}$ is a formula over $\{\ulcorner Y_0 \urcorner : \ulcorner Y \urcorner \in \sigma\}$ ($\subset 2 \cdot \sigma$),
     \item $\psi^{\ulcorner X \urcorner}$ is a sentence over $2 \cdot \sigma$,
     \item if $\ulcorner X \urcorner$ is an $n$-ary function symbol, then 
@@ -603,7 +605,7 @@ Let $\sigma$ be a signature. We say a sentence $\phi$ over $2 \cdot \sigma$ is \
         \end{align*}
     \end{itemize}
     \item $\phi = \bigwedge \{\psi^{\ulcorner X \urcorner} : \ulcorner X \urcorner \in \sigma\}$.
-\end{itemize}
+\end{enumerate}
 We call $\phi^{\ulcorner X \urcorner}$ the \emph{witness for} $\ulcorner X \urcorner$ \emph{to} $\phi$ \emph{being bounded for} $\sigma$.
 \end{defi}
 
@@ -696,10 +698,10 @@ defines a function $l$ from $\mathcal{P}(b(\mathfrak{M}))$ into $S(\mathfrak{M})
 For the new $\mathfrak{M}$, the relation symbol $\ulcorner \mathrm{In} \urcorner$ morally interprets a generalised Turing tape of shape $(b(\mathfrak{M}); \sigma(\mathfrak{M}) \setminus \{\ulcorner \mathrm{In} \urcorner\}$. Each initial state has the input written on the tape, while the other components of the machine are set to default values. As such, variability of initial states occurs only on the tape, as is the case for any Turing machine. 
 
 Identifying each non-relational $\ulcorner X \urcorner$ in the original $\sigma(\mathfrak{M})$ with $\ulcorner R^X \urcorner$, we can conclude that for every $A \subset b(\mathfrak{M})$, 
-\begin{itemize}
+\begin{enumerate}[label=(\arabic*)]
     \item the original $\mathfrak{M}$ terminates on input $A$ iff the new $\mathfrak{M}$ terminates on input $A$, and
     \item if the original and the new $\mathfrak{M}$ terminate on input $A$ with runs $(s_i : i < m)$ and $(s'_i : i < n)$ respectively, then $n = m + 1$ and for each $i < m$, $s_i$ is a reduct of $s'_{i+1}$.
-\end{itemize} 
+\end{enumerate} 
 This means that our modifications to $\mathfrak{M}$ do not change its essence as an algorithm. There is thus no loss in computability resulting from a Turing-machine-like standardisation of loading functions. A similar (in fact, simpler) argument can be used to justify a Turing-machine-like standardisation of unloading functions.
 
 In accordance to the discussion above, we want an ASM $\mathfrak{M}$ to have a signature $\sigma(\mathfrak{M})$ containing two distinguished unary relation symbols $\ulcorner \mathrm{In} \urcorner$ and $\ulcorner \mathrm{Out} \urcorner$, representing the input and output tapes respectively. Moreover, we want the specification of $\mathfrak{M}$ to include a first-order sentence $\phi^d_{\mathfrak{M}}$ over $\sigma(\mathfrak{M}) \setminus \{\ulcorner \mathrm{In} \urcorner, \ulcorner \mathrm{Out} \urcorner\}$ that describes the default ``non-tape'' configuration of $\mathfrak{M}$. As in the case of transition functions, we want the loading function described by $\phi^d_{\mathfrak{M}}$ to be absolute for transitive models of $\mathsf{ZFC}$. To do so, we want to first impose a greater amount of structure on the states of an ASM.
@@ -710,7 +712,7 @@ Now we can formally state our requirements for $\phi^d_{\mathfrak{M}}$. Taking a
 \begin{equation*}
     \ulcorner X \urcorner \in \sigma(\mathfrak{M}) \setminus \{\ulcorner \in \urcorner, \ulcorner \mathrm{In} \urcorner, \ulcorner \mathrm{Out} \urcorner\}
 \end{equation*} there must be $\phi^{\ulcorner X \urcorner}$ and $\psi^{\ulcorner X \urcorner}$ such that
-\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
     \item $\phi^{\ulcorner X \urcorner}$ is a formula over $\{\ulcorner \in \urcorner\}$,
     \item $\psi^{\ulcorner X \urcorner}$ is a sentence over $\sigma(\mathfrak{M}) \setminus \{\ulcorner \mathrm{In} \urcorner, \ulcorner \mathrm{Out} \urcorner\}$,
     \item if $\ulcorner X \urcorner$ is an $n$-ary function symbol, then 
@@ -738,7 +740,7 @@ Now we can formally state our requirements for $\phi^d_{\mathfrak{M}}$. Taking a
         \end{align*}
     \end{itemize}
     \item $\phi^d_{\mathfrak{M}} = \bigwedge \{\psi^{\ulcorner X \urcorner} : \ulcorner X \urcorner \in \sigma\}$.
-\end{itemize}
+\end{enumerate}
 We call such $\phi^d_{\mathfrak{M}}$ \emph{simple for} $\sigma(\mathfrak{M})$, and $\phi^{\ulcorner X \urcorner}$ the \emph{witness for} $\ulcorner X \urcorner$ \emph{to} $\phi^d_{\mathfrak{M}}$ \emph{being simple for} $\sigma(\mathfrak{M})$ Additionally,
 \begin{equation*}
     \ulcorner \phi^d_{\mathfrak{M}} \wedge \forall y \ (\neg \mathrm{Out}(y)) \wedge \mathrm{In}(x) \urcorner
@@ -834,7 +836,7 @@ Fix any limit ordinal $\kappa$. Notice that there are only countably many RASMs 
 
 \begin{defi}
 If $\mathfrak{M} = (\kappa(\mathfrak{M}), \sigma(\mathfrak{M}), \phi^{\tau}_{\mathfrak{M}}, \phi^d_{\mathfrak{M}})$ is an RASM, define 
-\begin{itemize}
+\begin{enumerate}[label=(\arabic*)]
     \item $S(\mathfrak{M})$ as in Definition \ref{def224},
     \item $\tau_{\mathfrak{M}} := \{(s_0, s_1) \in S(\mathfrak{M})^2 : (s_0, s_1) \models_2 \phi^{\tau}_{\mathfrak{M}}\}$,
     \item 
@@ -850,20 +852,20 @@ If $\mathfrak{M} = (\kappa(\mathfrak{M}), \sigma(\mathfrak{M}), \phi^{\tau}_{\ma
         u_{\mathfrak{M}} := \{ & (s, A) \in S(\mathfrak{M}) \times \mathcal{P}(\kappa(\mathfrak{M})) : \\
         & \forall a \in \kappa(\mathfrak{M}) \ (a \in A \iff s \models \ulcorner \mathrm{Out}(a) \urcorner)\} \text{.}
     \end{aligned}$
-\end{itemize}
+\end{enumerate}
 \end{defi}
 
 The next proposition highlights the important properties of RASM, based on what we have discussed so far.
 
 \begin{prop}\label{prop226}
 Let $\mathfrak{M}$ be an RASM. Then the following are absolute for transitive models of $\mathsf{ZFC}$ containing $\mathfrak{T}(\mathfrak{M})$:
-\begin{itemize}
+\begin{enumerate}[label=(\arabic*)]
     \item the definition of $S(\mathfrak{M})$,
     \item the definition of $\tau_{\mathfrak{M}}$ and $\tau_{\mathfrak{M}}$ being a function from $S(\mathfrak{M})$ into $S(\mathfrak{M})$,
     \item the definition of $l_{\mathfrak{M}}$ and $l_{\mathfrak{M}}$ being a function from $\mathcal{P}(\kappa(\mathfrak{M}))$ into $S(\mathfrak{M})$,
     \item the definition of $I(\mathfrak{M})$,
     \item the definition of $u_{\mathfrak{M}}$ and $u_{\mathfrak{M}}$ being a function from $S(\mathfrak{M})$ into $\mathcal{P}(\kappa(\mathfrak{M}))$. 
-\end{itemize}
+\end{enumerate}
 \end{prop}
 
 Now that RASMs have been officially defined, it is imperative to revisit Example \ref{ex212}, for any notion of generalised algorithm that cannot represent an arbitrary Turing cannot be too useful.
@@ -1022,14 +1024,14 @@ We are ready to define transfinite terminating runs of RASMs.
 
 \begin{defi}
 Let $\mathfrak{M}$ be an RASM that is practically closed under $Y$. A \emph{short terminating run of} $(\mathfrak{M}, Y)$ \emph{with input} $A$ \emph{and output} $B$ is a function $Sq$ from some successor ordinal $\delta < \kappa(\mathfrak{M})$ into $S(\mathfrak{M})$ such that 
-\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
     \item $A, B \subset \kappa(\mathfrak{M})$,
     \item $Sq(0) = l_{\mathfrak{M}}(A)$,
     \item $Sq(\alpha + 1) = \tau_{\mathfrak{M}}(Sq(\alpha)) \neq Sq(\alpha)$ for all $\alpha < \delta - 1$,
     \item $Y$ witnesses $Sq(\gamma)$ is a simple limit of $Sq \restriction \gamma$ for all limit $\gamma < \delta$,
     \item $\tau_{\mathfrak{M}}(Sq(\delta - 1)) = Sq(\delta - 1)$, and
     \item $u_{\mathfrak{M}}(Sq(\delta - 1)) = B$.
-\end{itemize}
+\end{enumerate}
 \end{defi}
 
 \begin{prop}\label{prop239}
@@ -1039,7 +1041,7 @@ Suppose $\mathfrak{M}$ is an RASM practically closed under $Y$. Then for some si
     \item $\kappa(\mathfrak{M}') = \kappa(\mathfrak{M})$,
 \end{itemize}
 and $Z$ is a set of simple limit formulas preserving ordinal limits with $\mathfrak{M}'$ strongly closed under $Z$, there is an RASM $\mathfrak{M}^*$ such that
-\begin{enumerate}[label=(\arabic*)]
+\begin{enumerate}[label=(\alph*)]
     \item\label{2391} $\sigma(\mathfrak{M}^*) = \sigma'$,
     \item\label{2392} $\kappa(\mathfrak{M}^*) = \kappa(\mathfrak{M})$, and
     \item\label{2393} for all $A, B \subset \kappa(\mathfrak{M})$, a short terminating run of $(\mathfrak{M}, Y)$ with input $A$ and output $B$ exists iff a short terminating run of $(\mathfrak{M}^*, Z)$ with input $A$ and output $B$ exists.
@@ -1086,7 +1088,7 @@ Until now, we have only considered ``short'' transfinite runs, that is, runs tha
 
 \begin{defi}\label{def242}
 Let $\mathfrak{M}$ be an RASM. A \emph{terminating run of} $\mathfrak{M}$ \emph{with input} $A$ \emph{and output} $B$ is a function $Sq$ from some successor ordinal $\delta$ into $S(\mathfrak{M})$ such that 
-\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
     \item $A, B \subset \kappa(\mathfrak{M})$,
     \item $Sq(0) = l_{\mathfrak{M}}(A)$,
     \item $Sq(\alpha + 1) = \tau_{\mathfrak{M}}(Sq(\alpha)) \neq Sq(\alpha)$ for all $\alpha < \delta - 1$,
@@ -1100,7 +1102,7 @@ Let $\mathfrak{M}$ be an RASM. A \emph{terminating run of} $\mathfrak{M}$ \emph{
     \end{gather*}
     \item $\tau_{\mathfrak{M}}(Sq(\delta - 1)) = Sq(\delta - 1)$, and
     \item $u_{\mathfrak{M}}(Sq(\delta - 1)) = B$.
-\end{itemize}
+\end{enumerate}
 \end{defi}
 
 A key realisation informing Definition \ref{def242} is that the existence, the uniqueness and the computation of limit inferiors, with regards to sequences of ordinals indexed by ordinals, are absolute. This, coupled with Proposition \ref{prop226}, gives us the absoluteness of terminating runs. More precisely, let $\kappa$ be a limit ordinal and $A, B$ be two sets of ordinals. Due to the absoluteness of taking limit inferior in general, the sets
@@ -1129,10 +1131,10 @@ As prefaced in the previous subsection, we aim to use our definition of terminat
 
 \begin{defi}
 For any limit ordinal $\kappa$ and any two sets of ordinals $A$ and $B$, $B$ is $\kappa$\emph{-computable from} $A$ --- denoted $B \leq^C_{\kappa} A$ --- iff
-\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
     \item $A, B \subset \kappa$, and
     \item for some RASM $\mathfrak{M}$ with $\kappa(\mathfrak{M}) = \kappa$, there is a terminating run of $\mathfrak{M}$ with input $A$ and output $B$. 
-\end{itemize}
+\end{enumerate}
 In this case, $\mathfrak{M}$ \emph{witnesses} $B \leq^C_{\kappa} A$.
 \end{defi}
 
@@ -1177,18 +1179,18 @@ Suppose $\kappa, \kappa'$ are limit ordinals, $\kappa < \kappa'$, $A \leq^C_{\ka
 
 \begin{proof}
 Let $\mathfrak{M}$ be an RASM witnessing $A \leq^C_{\kappa} B$. Define an RASM $\mathfrak{M}'$ with $\kappa(\mathfrak{M}') = \kappa'$ and $\sigma(\mathfrak{M}') = \sigma(\mathfrak{M})$. Since $\kappa$ is definable over $(\kappa'; \in)$, we can relativise both $\phi^d_{\mathfrak{M}}$ and $\phi^{\tau}_{\mathfrak{M}}$ to $\kappa'$ so that if $\ulcorner X \urcorner \in \sigma(\mathfrak{M})$ is an $n$-ary function symbol and $\alpha_1, \dots, \alpha_n \in \kappa'$, then 
-\begin{itemize}
+\begin{enumerate}[label=(\arabic*)]
     \item the default value of $X(\alpha_1, \dots, \alpha_n)$
-    \begin{itemize}[label=$\circ$]
+    \begin{enumerate}[label=(\alph*)]
         \item follows what is given by $\phi^d_{\mathfrak{M}}$ if $\alpha_1, \dots, \alpha_n \in \kappa$, and
         \item is set to $0$ otherwise, and
-    \end{itemize}
+    \end{enumerate}
     \item the next-stage value of $X(\alpha_1, \dots, \alpha_n)$
-    \begin{itemize}[label=$\circ$]
+    \begin{enumerate}[label=(\alph*)]
         \item follows the result of computation by $\tau_{\mathfrak{M}}$ if $\alpha_1, \dots, \alpha_n \in \kappa$, and
         \item is set to $0$ otherwise.
-    \end{itemize}
-\end{itemize} 
+    \end{enumerate}
+\end{enumerate} 
 Set $\phi^d_{\mathfrak{M}'}$ and $\phi^{\tau}_{\mathfrak{M}'}$ to be the relativised versions of $\phi^d_{\mathfrak{M}}$ and $\phi^{\tau}_{\mathfrak{M}}$ respectively. Then $\mathfrak{M}'$ witnesses $A \leq^C_{\kappa'} B$.
 \end{proof}
 
@@ -1218,10 +1220,10 @@ The definitions and properties so far associated with RASMs adapt perfectly to R
 
 \begin{defi}\label{def38}
 For any limit ordinal $\kappa$ and any two sets of ordinals $A$ and $B$, $B$ is $\kappa$\emph{-computable with parameters from} $A$ --- denoted $B \leq^P_{\kappa} A$ --- iff 
-\begin{itemize}
+\begin{enumerate}[label=(\alph*)]
     \item $A, B \subset \kappa$, and
     \item for some RASMP $\mathfrak{M}$ with $\kappa(\mathfrak{M}) = \kappa$, there is a terminating run of $\mathfrak{M}$ with input $A$ and output $B$. 
-\end{itemize}
+\end{enumerate}
 In this case, $\mathfrak{M}$ \emph{witnesses} $B \leq^P_{\kappa} A$.
 \end{defi}
 
@@ -1361,7 +1363,7 @@ Suppose $\mathfrak{M}$ is an RASMP practically closed under $Y$. Then for some s
     \item $\kappa(\mathfrak{M}') = \kappa(\mathfrak{M})$,
 \end{itemize}
 and $Z$ is a set of simple limit formulas preserving ordinal limits with $\mathfrak{M}'$ strongly closed under $Z$, there is an RASM $\mathfrak{M}^*$ such that
-\begin{enumerate}[label=(\arabic*)]
+\begin{enumerate}[label=(\alph*)]
     \item $\sigma(\mathfrak{M}^*) = \sigma'$,
     \item $\kappa(\mathfrak{M}^*) = (2^{\kappa(\mathfrak{M})})^+$, and
     \item\label{2613} for all $A, B \subset \kappa(\mathfrak{M}^*)$, a terminating run of $(\mathfrak{M}, Y)$ with input $A \restriction \kappa(\mathfrak{M})$ and output $B \restriction \kappa(\mathfrak{M})$ exists iff a terminating run of $(\mathfrak{M}^*, Z)$ with input $A$ and output $B \restriction \kappa(\mathfrak{M})$ exists.
@@ -1487,7 +1489,7 @@ It is not difficult to check that modifying Example \ref{ex228} by substituting 
 
 \begin{defi}[Koepke, \cite{koepke2}]
 Let $\alpha$ be a limit ordinal. A set $B \subset \alpha$ is $\alpha$\emph{-computable in} $A \subset \alpha$ --- denoted $B \preceq_{\alpha} A$ --- iff there is an $\alpha$-machine $M$ for which
-\begin{enumerate}[label=(\arabic*)]
+\begin{enumerate}[label=(\alph*)]
     \item $M$ halts on input $\langle \{\beta\}, A \rangle$ for all $\beta < \alpha$, and
     \item $B = \{\beta < \alpha : M(\langle \{\beta\}, A \rangle) = 1\}$.
 \end{enumerate}
@@ -1554,14 +1556,14 @@ Every terminating run of $\mathfrak{M}'$ is of length $\kappa + 2$, and if its i
 \begin{equation*}
     \{\beta < \alpha : M \text{ halts on input } \langle \{\beta\}, I \rangle\} \text{.}
 \end{equation*}This is because
-\begin{itemize}
+\begin{enumerate}[label=(\arabic*)]
     \item no state where Case 4 applies is reachable from an initial state, so a run can only terminate from an initial state as a consequence of Case 3, and
     \item $c_0$ first returns to $0$ in a state other than an initial state after exactly $\kappa + 1$ many steps, at which point $M$ would have been simulated on every input in 
     \begin{equation*}
         \{\langle \{\beta\}, I \rangle : \beta < \kappa\}
     \end{equation*}
     for up to arbitrarily many steps $< \kappa$, with all eventual haltings recorded in $R$.
-\end{itemize}
+\end{enumerate}
 In particular, there is a terminating run of $\mathfrak{M}'$ with input $A$ and output $B$, whence $B \leq^P A$.
 \end{proof}
 
@@ -1619,11 +1621,11 @@ Philosophically, this seems to indicate that the amount of computing power a set
     \item or formulas satisfying a version of Gurevich's bounded exploration postulate
 \end{itemize}
 --- we can still achieve the same reach. Indeed, the fact that the relative computability relations arising from
-\begin{itemize}
+\begin{enumerate}[label=(GCT\arabic*), leftmargin=50pt]
     \item a ``low-level'' machine model of generalised computation such as ordinal Turing machines, 
     \item a ``high-level'' machine model of generalised computation such as RASMPs, and
     \item an algebraic model of generalised computation such as relativised constructibility
-\end{itemize}
+\end{enumerate}
 happen to coincide, is suggestive of a plausible generalised-computability counterpart to the Church-Turing thesis.
 
 Just as practical implementations of finitary ASMs do not aim to model algorithmic intuition beyond the limits of Church-Turing thesis, RASMPs should not allow for algorithms that are non-constructible. We can view RASMPs as a paradigm for easy high-level descriptions of algorithms on arbitrary sets, one that gives the user enough structure to organise their ideas, and serves as guardrails to rule out clearly non-algorithm descriptions.
@@ -1668,7 +1670,7 @@ for admissible ordinals $\alpha$. The last inclusion cannot be reversed in gener
 
 Table \ref{table3} summarises the similarities and differences among the relations $\leq^{P, s}_{\alpha}$, $\leq^P_{\alpha}$, $\leq_{\alpha}$ and $\preceq_{\alpha}$. When we say a relation possesses the property of ``oracle-analogue'', we mean that the definition of said relation depends on --- or makes reference to --- some object analogous to the oracle in the definition of classical oracle machines.
 
-\begin{table}[!htp]
+\begin{table}
     \caption{Comparing two of our relative computability relations with more standard ones in the of study generalised computability, at arbitrary admissible ordinals $\alpha$.}
     \label{table3}
     \centering
